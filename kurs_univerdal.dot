@@ -1,0 +1,64 @@
+digraph G {
+	node [shape=box];
+	"EaterBuilder" -> "CharacterBuilder";
+	"EaterBuilder" -> "Eater";
+	"TapMove" -> "AbstractCharacter";
+	"TapMove" -> "CharacterMoving";
+	"SceneViewController" -> "GameTypesFactory";
+	"SceneViewController" -> "GameScene";
+	"CharacterMoving" -> {};
+	"Monster" -> "AbstractCharacter";
+	"BlackHoleProxy" -> "BlackHole";
+	"FlyweightTextureFactory" -> {};
+	"Eater" -> "AbstractCharacter";
+	"CharacterCommand" -> "AbstractCharacter";
+	"GameSceneTap" -> "CharacterCommandExecutor";
+	"GameSceneTap" -> "TapMove";
+	"GameSceneTap" -> "CharacterMoving";
+	"GameSceneTap" -> "GameScene";
+	"Pods-kurs_univerdal-dummy" -> {};
+	"main" -> "AppDelegate";
+	"GameViewController" -> "SceneViewController";
+	"GameViewController" -> "GameTypesFactory";
+	"BlackHole" -> "FlyweightTextureFactory";
+	"AppDelegate" -> {};
+	"LinearMove" -> "CharacterMoving";
+	"GameTypesFactory" -> "Monster";
+	"GameTypesFactory" -> "GameSceneTap";
+	"GameTypesFactory" -> "GameSceneTimer";
+	"AbstractCharacter" -> "CharacterMoving";
+	"MonsterBuilder" -> "CharacterBuilder";
+	"MonsterBuilder" -> "Monster";
+	"SettingsViewController" -> "GameTypesFactory";
+	"SettingsViewController" -> "GameViewController";
+	"GameOverViewController" -> {};
+	"CharacterBuilder" -> "AbstractCharacter";
+	"CharacterBuilderDirector" -> "MonsterBuilder";
+	"CharacterBuilderDirector" -> "EaterBuilder";
+	"CharacterBuilderDirector" -> "Monster";
+	"CharacterBuilderDirector" -> "Eater";
+	"MonstersIterator" -> "CharacterBuilderDirector";
+	"MonstersIterator" -> "GameTypesFactory";
+	"MonstersIterator" -> "Monster";
+	"CharacterCommandExecutor" -> "CharacterCommand";
+	"GameScene" -> "CharacterMoving";
+	"GameScene" -> "Monster";
+	"GameScene" -> "MonstersIterator";
+	"GameScene" -> "Eater";
+	"GameScene" -> "BlackHoleProxy";
+	"GameScene" -> "LinearMove";
+	"GameScene" -> "CharacterCommandExecutor";
+	"GameScene" -> "CharacterCommand";
+	"GameScene" -> "AbstractCharacter";
+	"GameSceneTimer" -> "GameScene";
+	
+	
+	edge [color=blue, dir=both];
+	"GameTypesFactory" -> "CharacterBuilderDirector";
+	"LinearMove" -> "AbstractCharacter";
+	
+	edge [color=black];
+	node [shape=plaintext];
+	"Categories" [label="NSString+png"];
+}
+

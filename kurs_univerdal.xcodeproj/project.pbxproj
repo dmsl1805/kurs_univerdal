@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29462B175C0A1091C36775B7 /* libPods-kurs_univerdal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 826463D0FD746D3F122BE763 /* libPods-kurs_univerdal.a */; };
+		A314F0691CFAF98C008770BB /* GameTypesFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A314F0671CFAF98C008770BB /* GameTypesFactory.m */; };
+		A314F0711CFB00F6008770BB /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = A314F0701CFB00F6008770BB /* Eater.m */; };
+		A314F0751CFB0491008770BB /* AbstractCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = A314F0741CFB0491008770BB /* AbstractCharacter.m */; };
+		A314F0791CFB0568008770BB /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = A314F0781CFB0568008770BB /* Monster.m */; };
+		A32461421CFF350900C9016A /* CharacterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461411CFF350900C9016A /* CharacterCommand.m */; };
+		A32461461CFF366000C9016A /* CharacterCommandExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461451CFF366000C9016A /* CharacterCommandExecutor.m */; };
+		A324614A1CFF412E00C9016A /* MonstersIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461491CFF412E00C9016A /* MonstersIterator.m */; };
+		A34B76D11CFA303E00A3C36F /* eater.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A34B76D01CFA303E00A3C36F /* eater.atlas */; };
+		A34B76D61CFA31D000A3C36F /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B76D31CFA31D000A3C36F /* GameScene.m */; };
+		A34B76D71CFA31D000A3C36F /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B76D51CFA31D000A3C36F /* GameViewController.m */; };
+		A3695BE61CFA28CC000597E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3695BE51CFA28CC000597E7 /* main.m */; };
+		A3695BE91CFA28CC000597E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3695BE81CFA28CC000597E7 /* AppDelegate.m */; };
+		A3695BEE1CFA28CC000597E7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3695BED1CFA28CC000597E7 /* GameScene.sks */; };
+		A3695BF41CFA28CC000597E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF21CFA28CC000597E7 /* Main.storyboard */; };
+		A3695BF61CFA28CC000597E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF51CFA28CC000597E7 /* Assets.xcassets */; };
+		A3695BF91CFA28CC000597E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF71CFA28CC000597E7 /* LaunchScreen.storyboard */; };
+		A37F7C241D0017F50080F320 /* BlackHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C231D0017F50080F320 /* BlackHole.m */; };
+		A37F7C271D00624F0080F320 /* GameSceneTap.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C261D00624F0080F320 /* GameSceneTap.m */; };
+		A37F7C2C1D006CCC0080F320 /* LinearMove.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C2B1D006CCC0080F320 /* LinearMove.m */; };
+		A3A8D4801CFDA69400874195 /* File in Resources */ = {isa = PBXBuildFile; fileRef = A3A8D47F1CFDA69400874195 /* File */; };
+		A3B6D1711D01CF74007874F6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B6D1701D01CF74007874F6 /* SettingsViewController.m */; };
+		A3BFB84E1D0163EF0097B255 /* TapMove.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BFB84D1D0163EF0097B255 /* TapMove.m */; };
+		A3D4F2A41D055C7A00E8022E /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2A31D055C7A00E8022E /* GameOverViewController.m */; };
+		A3D4F2AD1D0570B700E8022E /* FlyweightTextureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2AC1D0570B700E8022E /* FlyweightTextureFactory.m */; };
+		A3D4F2B01D05733F00E8022E /* BlackHoleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2AF1D05733F00E8022E /* BlackHoleProxy.m */; };
+		A3E0D0A91CFC4379004579BC /* CharacterBuilderDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0A81CFC4379004579BC /* CharacterBuilderDirector.m */; };
+		A3E0D0AC1CFC44D3004579BC /* CharacterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0AB1CFC44D3004579BC /* CharacterBuilder.m */; };
+		A3E0D0AF1CFC47DA004579BC /* EaterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0AE1CFC47DA004579BC /* EaterBuilder.m */; };
+		A3E0D0C51CFC6D39004579BC /* MonsterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0C41CFC6D39004579BC /* MonsterBuilder.m */; };
+		A3EA28D21D0176FD00147B27 /* NSString+png.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA28D11D0176FD00147B27 /* NSString+png.m */; };
+		A3EA28D51D0182D100147B27 /* GameSceneTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA28D41D0182D100147B27 /* GameSceneTimer.m */; };
+		A3EA28D91D01A3C600147B27 /* SceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA28D81D01A3C600147B27 /* SceneViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02695993BD060CE7A958D10C /* Pods-kurs_univerdal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kurs_univerdal.release.xcconfig"; path = "Pods/Target Support Files/Pods-kurs_univerdal/Pods-kurs_univerdal.release.xcconfig"; sourceTree = "<group>"; };
+		826463D0FD746D3F122BE763 /* libPods-kurs_univerdal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kurs_univerdal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A314F0661CFAF98C008770BB /* GameTypesFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTypesFactory.h; sourceTree = "<group>"; };
+		A314F0671CFAF98C008770BB /* GameTypesFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTypesFactory.m; sourceTree = "<group>"; };
+		A314F06F1CFB00F6008770BB /* Eater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eater.h; sourceTree = "<group>"; };
+		A314F0701CFB00F6008770BB /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
+		A314F0731CFB0491008770BB /* AbstractCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCharacter.h; sourceTree = "<group>"; };
+		A314F0741CFB0491008770BB /* AbstractCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractCharacter.m; sourceTree = "<group>"; };
+		A314F0771CFB0568008770BB /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
+		A314F0781CFB0568008770BB /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
+		A32461401CFF350900C9016A /* CharacterCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCommand.h; sourceTree = "<group>"; };
+		A32461411CFF350900C9016A /* CharacterCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCommand.m; sourceTree = "<group>"; };
+		A32461441CFF366000C9016A /* CharacterCommandExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCommandExecutor.h; sourceTree = "<group>"; };
+		A32461451CFF366000C9016A /* CharacterCommandExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCommandExecutor.m; sourceTree = "<group>"; };
+		A32461481CFF412E00C9016A /* MonstersIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstersIterator.h; sourceTree = "<group>"; };
+		A32461491CFF412E00C9016A /* MonstersIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstersIterator.m; sourceTree = "<group>"; };
+		A34B76D01CFA303E00A3C36F /* eater.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = eater.atlas; sourceTree = "<group>"; };
+		A34B76D21CFA31D000A3C36F /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		A34B76D31CFA31D000A3C36F /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		A34B76D41CFA31D000A3C36F /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		A34B76D51CFA31D000A3C36F /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		A3695BE11CFA28CC000597E7 /* kurs_univerdal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurs_univerdal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3695BE51CFA28CC000597E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3695BE71CFA28CC000597E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A3695BE81CFA28CC000597E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3695BED1CFA28CC000597E7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		A3695BF31CFA28CC000597E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3695BF51CFA28CC000597E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3695BF81CFA28CC000597E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3695BFA1CFA28CC000597E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A37F7C221D0017F50080F320 /* BlackHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHole.h; sourceTree = "<group>"; };
+		A37F7C231D0017F50080F320 /* BlackHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHole.m; sourceTree = "<group>"; };
+		A37F7C251D00624F0080F320 /* GameSceneTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneTap.h; sourceTree = "<group>"; };
+		A37F7C261D00624F0080F320 /* GameSceneTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneTap.m; sourceTree = "<group>"; };
+		A37F7C281D006BE50080F320 /* CharacterMoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterMoving.h; sourceTree = "<group>"; };
+		A37F7C2A1D006CCC0080F320 /* LinearMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearMove.h; sourceTree = "<group>"; };
+		A37F7C2B1D006CCC0080F320 /* LinearMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearMove.m; sourceTree = "<group>"; };
+		A3A8D47F1CFDA69400874195 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		A3B6D16F1D01CF74007874F6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A3B6D1701D01CF74007874F6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A3BFB84C1D0163EF0097B255 /* TapMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapMove.h; sourceTree = "<group>"; };
+		A3BFB84D1D0163EF0097B255 /* TapMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapMove.m; sourceTree = "<group>"; };
+		A3D4F2A21D055C7A00E8022E /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		A3D4F2A31D055C7A00E8022E /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		A3D4F2AB1D0570B700E8022E /* FlyweightTextureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyweightTextureFactory.h; sourceTree = "<group>"; };
+		A3D4F2AC1D0570B700E8022E /* FlyweightTextureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyweightTextureFactory.m; sourceTree = "<group>"; };
+		A3D4F2AE1D05733F00E8022E /* BlackHoleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHoleProxy.h; sourceTree = "<group>"; };
+		A3D4F2AF1D05733F00E8022E /* BlackHoleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHoleProxy.m; sourceTree = "<group>"; };
+		A3E0D0A71CFC4379004579BC /* CharacterBuilderDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterBuilderDirector.h; sourceTree = "<group>"; };
+		A3E0D0A81CFC4379004579BC /* CharacterBuilderDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterBuilderDirector.m; sourceTree = "<group>"; };
+		A3E0D0AA1CFC44D3004579BC /* CharacterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterBuilder.h; sourceTree = "<group>"; };
+		A3E0D0AB1CFC44D3004579BC /* CharacterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterBuilder.m; sourceTree = "<group>"; };
+		A3E0D0AD1CFC47DA004579BC /* EaterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaterBuilder.h; sourceTree = "<group>"; };
+		A3E0D0AE1CFC47DA004579BC /* EaterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaterBuilder.m; sourceTree = "<group>"; };
+		A3E0D0C31CFC6D39004579BC /* MonsterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterBuilder.h; sourceTree = "<group>"; };
+		A3E0D0C41CFC6D39004579BC /* MonsterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterBuilder.m; sourceTree = "<group>"; };
+		A3EA28D01D0176FD00147B27 /* NSString+png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+png.h"; sourceTree = "<group>"; };
+		A3EA28D11D0176FD00147B27 /* NSString+png.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+png.m"; sourceTree = "<group>"; };
+		A3EA28D31D0182D100147B27 /* GameSceneTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneTimer.h; sourceTree = "<group>"; };
+		A3EA28D41D0182D100147B27 /* GameSceneTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneTimer.m; sourceTree = "<group>"; };
+		A3EA28D71D01A3C600147B27 /* SceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneViewController.h; sourceTree = "<group>"; };
+		A3EA28D81D01A3C600147B27 /* SceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneViewController.m; sourceTree = "<group>"; };
+		D3A892025F0BDE10FC4670D9 /* Pods-kurs_univerdal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kurs_univerdal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kurs_univerdal/Pods-kurs_univerdal.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3695BDE1CFA28CC000597E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29462B175C0A1091C36775B7 /* libPods-kurs_univerdal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33FF27215EF8AE0A6545FC98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A892025F0BDE10FC4670D9 /* Pods-kurs_univerdal.debug.xcconfig */,
+				02695993BD060CE7A958D10C /* Pods-kurs_univerdal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A09009B3B6D608BFD9DE65B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				826463D0FD746D3F122BE763 /* libPods-kurs_univerdal.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A314F06A1CFAF9A5008770BB /* Game scene mediator + observer + bridge */ = {
+			isa = PBXGroup;
+			children = (
+				A34B76D21CFA31D000A3C36F /* GameScene.h */,
+				A34B76D31CFA31D000A3C36F /* GameScene.m */,
+				A3695BED1CFA28CC000597E7 /* GameScene.sks */,
+				A37F7C251D00624F0080F320 /* GameSceneTap.h */,
+				A37F7C261D00624F0080F320 /* GameSceneTap.m */,
+				A3EA28D31D0182D100147B27 /* GameSceneTimer.h */,
+				A3EA28D41D0182D100147B27 /* GameSceneTimer.m */,
+			);
+			name = "Game scene mediator + observer + bridge";
+			sourceTree = "<group>";
+		};
+		A314F06B1CFAFE56008770BB /* Game types factory */ = {
+			isa = PBXGroup;
+			children = (
+				A314F0661CFAF98C008770BB /* GameTypesFactory.h */,
+				A314F0671CFAF98C008770BB /* GameTypesFactory.m */,
+			);
+			name = "Game types factory";
+			sourceTree = "<group>";
+		};
+		A314F06D1CFAFED6008770BB /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A34B76D41CFA31D000A3C36F /* GameViewController.h */,
+				A34B76D51CFA31D000A3C36F /* GameViewController.m */,
+			);
+			name = GameViewController;
+			sourceTree = "<group>";
+		};
+		A314F06E1CFB00CA008770BB /* Eater */ = {
+			isa = PBXGroup;
+			children = (
+				A314F06F1CFB00F6008770BB /* Eater.h */,
+				A314F0701CFB00F6008770BB /* Eater.m */,
+			);
+			name = Eater;
+			sourceTree = "<group>";
+		};
+		A314F0721CFB0449008770BB /* Character template + prototype + command */ = {
+			isa = PBXGroup;
+			children = (
+				A37F7C211D0017D90080F320 /* Black hole + chain of responsibility + Flyweight + proxy */,
+				A32461471CFF406E00C9016A /* Monster + iterator */,
+				A32461431CFF364200C9016A /* Command */,
+				A314F0731CFB0491008770BB /* AbstractCharacter.h */,
+				A314F0741CFB0491008770BB /* AbstractCharacter.m */,
+				A314F0761CFB0548008770BB /* Monster */,
+				A314F06E1CFB00CA008770BB /* Eater */,
+				A37F7C291D006C1D0080F320 /* Character moiving */,
+				A3EA28D01D0176FD00147B27 /* NSString+png.h */,
+				A3EA28D11D0176FD00147B27 /* NSString+png.m */,
+			);
+			name = "Character template + prototype + command";
+			sourceTree = "<group>";
+		};
+		A314F0761CFB0548008770BB /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				A314F0771CFB0568008770BB /* Monster.h */,
+				A314F0781CFB0568008770BB /* Monster.m */,
+			);
+			name = Monster;
+			sourceTree = "<group>";
+		};
+		A32461431CFF364200C9016A /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				A32461401CFF350900C9016A /* CharacterCommand.h */,
+				A32461411CFF350900C9016A /* CharacterCommand.m */,
+				A32461441CFF366000C9016A /* CharacterCommandExecutor.h */,
+				A32461451CFF366000C9016A /* CharacterCommandExecutor.m */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
+		A32461471CFF406E00C9016A /* Monster + iterator */ = {
+			isa = PBXGroup;
+			children = (
+				A32461481CFF412E00C9016A /* MonstersIterator.h */,
+				A32461491CFF412E00C9016A /* MonstersIterator.m */,
+			);
+			name = "Monster + iterator";
+			sourceTree = "<group>";
+		};
+		A3695BD81CFA28CC000597E7 = {
+			isa = PBXGroup;
+			children = (
+				A3A8D47F1CFDA69400874195 /* File */,
+				A3695BE31CFA28CC000597E7 /* kurs_univerdal */,
+				A3695BE21CFA28CC000597E7 /* Products */,
+				33FF27215EF8AE0A6545FC98 /* Pods */,
+				A09009B3B6D608BFD9DE65B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3695BE21CFA28CC000597E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3695BE11CFA28CC000597E7 /* kurs_univerdal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3695BE31CFA28CC000597E7 /* kurs_univerdal */ = {
+			isa = PBXGroup;
+			children = (
+				A314F06B1CFAFE56008770BB /* Game types factory */,
+				A3E0D0A61CFC16C4004579BC /* Character builder + singletone */,
+				A314F06A1CFAF9A5008770BB /* Game scene mediator + observer + bridge */,
+				A314F0721CFB0449008770BB /* Character template + prototype + command */,
+				A3695BE41CFA28CC000597E7 /* Supporting Files */,
+			);
+			path = kurs_univerdal;
+			sourceTree = "<group>";
+		};
+		A3695BE41CFA28CC000597E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4F2A61D055EC100E8022E /* View Controllers */,
+				A34B76D01CFA303E00A3C36F /* eater.atlas */,
+				A3695BF51CFA28CC000597E7 /* Assets.xcassets */,
+				A3695BE71CFA28CC000597E7 /* AppDelegate.h */,
+				A3695BE81CFA28CC000597E7 /* AppDelegate.m */,
+				A3695BE51CFA28CC000597E7 /* main.m */,
+				A3695BF71CFA28CC000597E7 /* LaunchScreen.storyboard */,
+				A3695BFA1CFA28CC000597E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A37F7C211D0017D90080F320 /* Black hole + chain of responsibility + Flyweight + proxy */ = {
+			isa = PBXGroup;
+			children = (
+				A37F7C221D0017F50080F320 /* BlackHole.h */,
+				A37F7C231D0017F50080F320 /* BlackHole.m */,
+				A3D4F2AB1D0570B700E8022E /* FlyweightTextureFactory.h */,
+				A3D4F2AC1D0570B700E8022E /* FlyweightTextureFactory.m */,
+				A3D4F2AE1D05733F00E8022E /* BlackHoleProxy.h */,
+				A3D4F2AF1D05733F00E8022E /* BlackHoleProxy.m */,
+			);
+			name = "Black hole + chain of responsibility + Flyweight + proxy";
+			sourceTree = "<group>";
+		};
+		A37F7C291D006C1D0080F320 /* Character moiving */ = {
+			isa = PBXGroup;
+			children = (
+				A37F7C281D006BE50080F320 /* CharacterMoving.h */,
+				A37F7C2A1D006CCC0080F320 /* LinearMove.h */,
+				A37F7C2B1D006CCC0080F320 /* LinearMove.m */,
+				A3BFB84C1D0163EF0097B255 /* TapMove.h */,
+				A3BFB84D1D0163EF0097B255 /* TapMove.m */,
+			);
+			name = "Character moiving";
+			sourceTree = "<group>";
+		};
+		A3D4F2A11D055C5600E8022E /* Settings View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3B6D16F1D01CF74007874F6 /* SettingsViewController.h */,
+				A3B6D1701D01CF74007874F6 /* SettingsViewController.m */,
+			);
+			name = "Settings View Controller";
+			sourceTree = "<group>";
+		};
+		A3D4F2A51D055C8000E8022E /* Game Over View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4F2A21D055C7A00E8022E /* GameOverViewController.h */,
+				A3D4F2A31D055C7A00E8022E /* GameOverViewController.m */,
+			);
+			name = "Game Over View Controller";
+			sourceTree = "<group>";
+		};
+		A3D4F2A61D055EC100E8022E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3695BF21CFA28CC000597E7 /* Main.storyboard */,
+				A3EA28D61D01A3A900147B27 /* scene view controller */,
+				A314F06D1CFAFED6008770BB /* GameViewController */,
+				A3D4F2A11D055C5600E8022E /* Settings View Controller */,
+				A3D4F2A51D055C8000E8022E /* Game Over View Controller */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A3E0D0A61CFC16C4004579BC /* Character builder + singletone */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0D0A71CFC4379004579BC /* CharacterBuilderDirector.h */,
+				A3E0D0A81CFC4379004579BC /* CharacterBuilderDirector.m */,
+				A3E0D0AA1CFC44D3004579BC /* CharacterBuilder.h */,
+				A3E0D0AB1CFC44D3004579BC /* CharacterBuilder.m */,
+				A3E0D0AD1CFC47DA004579BC /* EaterBuilder.h */,
+				A3E0D0AE1CFC47DA004579BC /* EaterBuilder.m */,
+				A3E0D0C31CFC6D39004579BC /* MonsterBuilder.h */,
+				A3E0D0C41CFC6D39004579BC /* MonsterBuilder.m */,
+			);
+			name = "Character builder + singletone";
+			sourceTree = "<group>";
+		};
+		A3EA28D61D01A3A900147B27 /* scene view controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3EA28D71D01A3C600147B27 /* SceneViewController.h */,
+				A3EA28D81D01A3C600147B27 /* SceneViewController.m */,
+			);
+			name = "scene view controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3695BE01CFA28CC000597E7 /* kurs_univerdal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3695BFD1CFA28CC000597E7 /* Build configuration list for PBXNativeTarget "kurs_univerdal" */;
+			buildPhases = (
+				D25DC93E4F4E140A9C0C395D /* 📦 Check Pods Manifest.lock */,
+				A3695BDD1CFA28CC000597E7 /* Sources */,
+				A3695BDE1CFA28CC000597E7 /* Frameworks */,
+				A3695BDF1CFA28CC000597E7 /* Resources */,
+				6317FAE39B761E1CF39B6FC7 /* 📦 Embed Pods Frameworks */,
+				D2F8432B36F5B6E97941D8B5 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kurs_univerdal;
+			productName = kurs_univerdal;
+			productReference = A3695BE11CFA28CC000597E7 /* kurs_univerdal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3695BD91CFA28CC000597E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = 3;
+				TargetAttributes = {
+					A3695BE01CFA28CC000597E7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = A3695BDC1CFA28CC000597E7 /* Build configuration list for PBXProject "kurs_univerdal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3695BD81CFA28CC000597E7;
+			productRefGroup = A3695BE21CFA28CC000597E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3695BE01CFA28CC000597E7 /* kurs_univerdal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3695BDF1CFA28CC000597E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3695BEE1CFA28CC000597E7 /* GameScene.sks in Resources */,
+				A3695BF91CFA28CC000597E7 /* LaunchScreen.storyboard in Resources */,
+				A3A8D4801CFDA69400874195 /* File in Resources */,
+				A34B76D11CFA303E00A3C36F /* eater.atlas in Resources */,
+				A3695BF61CFA28CC000597E7 /* Assets.xcassets in Resources */,
+				A3695BF41CFA28CC000597E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6317FAE39B761E1CF39B6FC7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kurs_univerdal/Pods-kurs_univerdal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25DC93E4F4E140A9C0C395D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F8432B36F5B6E97941D8B5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kurs_univerdal/Pods-kurs_univerdal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3695BDD1CFA28CC000597E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37F7C2C1D006CCC0080F320 /* LinearMove.m in Sources */,
+				A314F0791CFB0568008770BB /* Monster.m in Sources */,
+				A32461421CFF350900C9016A /* CharacterCommand.m in Sources */,
+				A3B6D1711D01CF74007874F6 /* SettingsViewController.m in Sources */,
+				A324614A1CFF412E00C9016A /* MonstersIterator.m in Sources */,
+				A3EA28D91D01A3C600147B27 /* SceneViewController.m in Sources */,
+				A34B76D71CFA31D000A3C36F /* GameViewController.m in Sources */,
+				A3EA28D21D0176FD00147B27 /* NSString+png.m in Sources */,
+				A37F7C241D0017F50080F320 /* BlackHole.m in Sources */,
+				A314F0711CFB00F6008770BB /* Eater.m in Sources */,
+				A3EA28D51D0182D100147B27 /* GameSceneTimer.m in Sources */,
+				A37F7C271D00624F0080F320 /* GameSceneTap.m in Sources */,
+				A3695BE91CFA28CC000597E7 /* AppDelegate.m in Sources */,
+				A3D4F2AD1D0570B700E8022E /* FlyweightTextureFactory.m in Sources */,
+				A3E0D0C51CFC6D39004579BC /* MonsterBuilder.m in Sources */,
+				A34B76D61CFA31D000A3C36F /* GameScene.m in Sources */,
+				A314F0691CFAF98C008770BB /* GameTypesFactory.m in Sources */,
+				A3E0D0A91CFC4379004579BC /* CharacterBuilderDirector.m in Sources */,
+				A3D4F2A41D055C7A00E8022E /* GameOverViewController.m in Sources */,
+				A32461461CFF366000C9016A /* CharacterCommandExecutor.m in Sources */,
+				A3695BE61CFA28CC000597E7 /* main.m in Sources */,
+				A3BFB84E1D0163EF0097B255 /* TapMove.m in Sources */,
+				A3E0D0AF1CFC47DA004579BC /* EaterBuilder.m in Sources */,
+				A3E0D0AC1CFC44D3004579BC /* CharacterBuilder.m in Sources */,
+				A314F0751CFB0491008770BB /* AbstractCharacter.m in Sources */,
+				A3D4F2B01D05733F00E8022E /* BlackHoleProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A3695BF21CFA28CC000597E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3695BF31CFA28CC000597E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3695BF71CFA28CC000597E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3695BF81CFA28CC000597E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3695BFB1CFA28CC000597E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3695BFC1CFA28CC000597E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3695BFE1CFA28CC000597E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A892025F0BDE10FC4670D9 /* Pods-kurs_univerdal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kurs_univerdal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.kurs-univerdal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3695BFF1CFA28CC000597E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02695993BD060CE7A958D10C /* Pods-kurs_univerdal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kurs_univerdal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.kurs-univerdal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3695BDC1CFA28CC000597E7 /* Build configuration list for PBXProject "kurs_univerdal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3695BFB1CFA28CC000597E7 /* Debug */,
+				A3695BFC1CFA28CC000597E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3695BFD1CFA28CC000597E7 /* Build configuration list for PBXNativeTarget "kurs_univerdal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3695BFE1CFA28CC000597E7 /* Debug */,
+				A3695BFF1CFA28CC000597E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3695BD91CFA28CC000597E7 /* Project object */;
+}
