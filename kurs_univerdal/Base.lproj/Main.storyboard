@@ -85,7 +85,7 @@
                                     <constraint firstAttribute="height" constant="44" id="48Z-xJ-uRg"/>
                                     <constraint firstAttribute="width" constant="44" id="uzA-yf-ghA"/>
                                 </constraints>
-                                <state key="normal" image="Circled Left-104"/>
+                                <state key="normal" image="Back-100"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="d0C-Pz-ixd" eventType="touchUpInside" id="Hq2-LW-3Ws"/>
                                 </connections>
@@ -222,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5B0-rd-y7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-179"/>
+            <point key="canvasLocation" x="583" y="-117"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -242,18 +242,6 @@
                                 <color key="textColor" red="1" green="0.94117647058823528" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-PE-QNC">
-                                <rect key="frame" x="266" y="30" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="Del-yg-miR"/>
-                                    <constraint firstAttribute="height" constant="44" id="fXY-9U-Vdj"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="2" height="3"/>
-                                <state key="normal" image="Settings Filled-100"/>
-                                <connections>
-                                    <segue destination="d0C-Pz-ixd" kind="show" id="jnw-MV-hus"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-uG-ZqL">
                                 <rect key="frame" x="14" y="427" width="99" height="21"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
@@ -326,6 +314,18 @@
                                     <segue destination="6wI-NP-uzZ" kind="show" identifier="timeTrial" id="W8T-ch-flF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-PE-QNC">
+                                <rect key="frame" x="266" y="28" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Del-yg-miR"/>
+                                    <constraint firstAttribute="height" constant="44" id="fXY-9U-Vdj"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2" height="3"/>
+                                <state key="normal" image="Settings 3-96"/>
+                                <connections>
+                                    <segue destination="d0C-Pz-ixd" kind="show" id="jnw-MV-hus"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -377,13 +377,51 @@
                     <view key="view" contentMode="scaleToFill" id="fal-h2-NvQ" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5a-HH-4nM">
+                                <rect key="frame" x="55" y="10" width="225" height="20"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="OCk-vv-vKw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-jg-uLn">
+                                <rect key="frame" x="10" y="10" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4q6-Dn-8lc"/>
+                                    <constraint firstAttribute="width" constant="35" id="vne-Tj-2gF"/>
+                                </constraints>
+                                <state key="normal" image="pause"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="6wI-NP-uzZ" eventType="touchUpInside" id="CZr-fv-mIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bxj-jg-uLn" firstAttribute="leading" secondItem="fal-h2-NvQ" secondAttribute="leading" constant="10" id="Mq0-kX-FqC"/>
+                            <constraint firstItem="t5a-HH-4nM" firstAttribute="top" secondItem="fal-h2-NvQ" secondAttribute="top" constant="10" id="N5J-Kv-86g"/>
+                            <constraint firstAttribute="trailing" secondItem="t5a-HH-4nM" secondAttribute="trailing" constant="40" id="T52-XN-TDE"/>
+                            <constraint firstItem="Bxj-jg-uLn" firstAttribute="top" secondItem="fal-h2-NvQ" secondAttribute="top" constant="10" id="iA0-be-ANb"/>
+                            <constraint firstItem="t5a-HH-4nM" firstAttribute="leading" secondItem="Bxj-jg-uLn" secondAttribute="trailing" constant="10" id="maS-O9-eFU"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlL-F3-OQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="502"/>
+            <point key="canvasLocation" x="757" y="629"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="NAr-Ah-iXh">
@@ -400,36 +438,74 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwB-TL-uk5">
                                 <rect key="frame" x="61" y="140" width="199" height="40"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.91368595508071471" blue="0.47241254017609735" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.9137254901960784" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-lV-SQJ">
+                                <rect key="frame" x="10" y="30" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="or7-Np-uDI"/>
+                                    <constraint firstAttribute="height" constant="44" id="slU-Z0-0Ba"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2" height="3"/>
+                                <state key="normal" image="Settings Filled-100"/>
+                                <connections>
+                                    <segue destination="d0C-Pz-ixd" kind="show" id="jH4-z2-rtc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Try again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNS-9y-r1x">
+                                <rect key="frame" x="92" y="258" width="138" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oYY-DD-PkS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.9137254901960784" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-Gu-iLT">
+                                <rect key="frame" x="109" y="370" width="104" height="104"/>
+                                <state key="normal" image="Repeat-104"/>
+                                <connections>
+                                    <segue destination="6wI-NP-uzZ" kind="show" identifier="tryAgain" id="UCa-6P-gQy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="aNY-lV-SQJ" firstAttribute="top" secondItem="kTC-uj-f3B" secondAttribute="bottom" constant="10" id="0KY-Al-27s"/>
                             <constraint firstItem="CwB-TL-uk5" firstAttribute="centerX" secondItem="j35-No-NVi" secondAttribute="centerX" id="3GE-tp-nJx"/>
+                            <constraint firstItem="gNS-9y-r1x" firstAttribute="top" secondItem="CwB-TL-uk5" secondAttribute="bottom" constant="80" id="5tK-vw-dTX"/>
+                            <constraint firstItem="aNY-lV-SQJ" firstAttribute="leading" secondItem="j35-No-NVi" secondAttribute="leading" constant="10" id="Zsc-hZ-ERF"/>
                             <constraint firstItem="CwB-TL-uk5" firstAttribute="top" secondItem="kTC-uj-f3B" secondAttribute="bottom" constant="120" id="e7z-Oz-McZ"/>
+                            <constraint firstItem="IFx-Gu-iLT" firstAttribute="centerX" secondItem="gNS-9y-r1x" secondAttribute="centerX" id="jdQ-yE-EUK"/>
+                            <constraint firstItem="IFx-Gu-iLT" firstAttribute="top" secondItem="gNS-9y-r1x" secondAttribute="bottom" constant="80" id="uAU-QG-Jf3"/>
+                            <constraint firstItem="gNS-9y-r1x" firstAttribute="centerX" secondItem="CwB-TL-uk5" secondAttribute="centerX" id="x3r-vE-Jhe"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U24-V1-OxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="502"/>
+            <point key="canvasLocation" x="150" y="1129"/>
         </scene>
     </scenes>
     <resources>
         <image name="Alien-96" width="96" height="96"/>
         <image name="Armored Helmet-96" width="96" height="96"/>
         <image name="Babys Room-96" width="96" height="96"/>
+        <image name="Back-100" width="100" height="100"/>
         <image name="Captain America-96" width="96" height="96"/>
-        <image name="Circled Left-104" width="104" height="104"/>
         <image name="Hellraiser Pinhead-96" width="96" height="96"/>
         <image name="Natural User Interface 2-96" width="96" height="96"/>
+        <image name="Repeat-104" width="104" height="104"/>
         <image name="Running Rabbit-96" width="96" height="96"/>
+        <image name="Settings 3-96" width="96" height="96"/>
         <image name="Settings Filled-100" width="100" height="100"/>
         <image name="Timer-80" width="80" height="80"/>
+        <image name="pause" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W8T-ch-flF"/>
+        <segue reference="UCa-6P-gQy"/>
+        <segue reference="jH4-z2-rtc"/>
     </inferredMetricsTieBreakers>
 </document>

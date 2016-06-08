@@ -15,7 +15,6 @@
 		A32461421CFF350900C9016A /* CharacterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461411CFF350900C9016A /* CharacterCommand.m */; };
 		A32461461CFF366000C9016A /* CharacterCommandExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461451CFF366000C9016A /* CharacterCommandExecutor.m */; };
 		A324614A1CFF412E00C9016A /* MonstersIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = A32461491CFF412E00C9016A /* MonstersIterator.m */; };
-		A34B76D11CFA303E00A3C36F /* eater.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A34B76D01CFA303E00A3C36F /* eater.atlas */; };
 		A34B76D61CFA31D000A3C36F /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B76D31CFA31D000A3C36F /* GameScene.m */; };
 		A34B76D71CFA31D000A3C36F /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B76D51CFA31D000A3C36F /* GameViewController.m */; };
 		A3695BE61CFA28CC000597E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3695BE51CFA28CC000597E7 /* main.m */; };
@@ -33,6 +32,9 @@
 		A3D4F2A41D055C7A00E8022E /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2A31D055C7A00E8022E /* GameOverViewController.m */; };
 		A3D4F2AD1D0570B700E8022E /* FlyweightTextureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2AC1D0570B700E8022E /* FlyweightTextureFactory.m */; };
 		A3D4F2B01D05733F00E8022E /* BlackHoleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4F2AF1D05733F00E8022E /* BlackHoleProxy.m */; };
+		A3D6FEAD1D06B58900F1E263 /* PauseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D6FEAC1D06B58900F1E263 /* PauseView.xib */; };
+		A3D6FEAF1D070E6A00F1E263 /* monster.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A3D6FEAE1D070E6A00F1E263 /* monster.atlas */; };
+		A3D6FEB11D0713F200F1E263 /* eater.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A3D6FEB01D0713F200F1E263 /* eater.atlas */; };
 		A3E0D0A91CFC4379004579BC /* CharacterBuilderDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0A81CFC4379004579BC /* CharacterBuilderDirector.m */; };
 		A3E0D0AC1CFC44D3004579BC /* CharacterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0AB1CFC44D3004579BC /* CharacterBuilder.m */; };
 		A3E0D0AF1CFC47DA004579BC /* EaterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0D0AE1CFC47DA004579BC /* EaterBuilder.m */; };
@@ -59,7 +61,6 @@
 		A32461451CFF366000C9016A /* CharacterCommandExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCommandExecutor.m; sourceTree = "<group>"; };
 		A32461481CFF412E00C9016A /* MonstersIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstersIterator.h; sourceTree = "<group>"; };
 		A32461491CFF412E00C9016A /* MonstersIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstersIterator.m; sourceTree = "<group>"; };
-		A34B76D01CFA303E00A3C36F /* eater.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = eater.atlas; sourceTree = "<group>"; };
 		A34B76D21CFA31D000A3C36F /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		A34B76D31CFA31D000A3C36F /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		A34B76D41CFA31D000A3C36F /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -91,6 +92,9 @@
 		A3D4F2AC1D0570B700E8022E /* FlyweightTextureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyweightTextureFactory.m; sourceTree = "<group>"; };
 		A3D4F2AE1D05733F00E8022E /* BlackHoleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHoleProxy.h; sourceTree = "<group>"; };
 		A3D4F2AF1D05733F00E8022E /* BlackHoleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHoleProxy.m; sourceTree = "<group>"; };
+		A3D6FEAC1D06B58900F1E263 /* PauseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PauseView.xib; sourceTree = "<group>"; };
+		A3D6FEAE1D070E6A00F1E263 /* monster.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = monster.atlas; sourceTree = "<group>"; };
+		A3D6FEB01D0713F200F1E263 /* eater.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = eater.atlas; sourceTree = "<group>"; };
 		A3E0D0A71CFC4379004579BC /* CharacterBuilderDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterBuilderDirector.h; sourceTree = "<group>"; };
 		A3E0D0A81CFC4379004579BC /* CharacterBuilderDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterBuilderDirector.m; sourceTree = "<group>"; };
 		A3E0D0AA1CFC44D3004579BC /* CharacterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterBuilder.h; sourceTree = "<group>"; };
@@ -259,7 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				A3D4F2A61D055EC100E8022E /* View Controllers */,
-				A34B76D01CFA303E00A3C36F /* eater.atlas */,
+				A3D6FEAE1D070E6A00F1E263 /* monster.atlas */,
+				A3D6FEB01D0713F200F1E263 /* eater.atlas */,
 				A3695BF51CFA28CC000597E7 /* Assets.xcassets */,
 				A3695BE71CFA28CC000597E7 /* AppDelegate.h */,
 				A3695BE81CFA28CC000597E7 /* AppDelegate.m */,
@@ -321,6 +326,7 @@
 				A314F06D1CFAFED6008770BB /* GameViewController */,
 				A3D4F2A11D055C5600E8022E /* Settings View Controller */,
 				A3D4F2A51D055C8000E8022E /* Game Over View Controller */,
+				A3D6FEAC1D06B58900F1E263 /* PauseView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -409,12 +415,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D6FEAF1D070E6A00F1E263 /* monster.atlas in Resources */,
 				A3695BEE1CFA28CC000597E7 /* GameScene.sks in Resources */,
 				A3695BF91CFA28CC000597E7 /* LaunchScreen.storyboard in Resources */,
 				A3A8D4801CFDA69400874195 /* File in Resources */,
-				A34B76D11CFA303E00A3C36F /* eater.atlas in Resources */,
+				A3D6FEAD1D06B58900F1E263 /* PauseView.xib in Resources */,
 				A3695BF61CFA28CC000597E7 /* Assets.xcassets in Resources */,
 				A3695BF41CFA28CC000597E7 /* Main.storyboard in Resources */,
+				A3D6FEB11D0713F200F1E263 /* eater.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

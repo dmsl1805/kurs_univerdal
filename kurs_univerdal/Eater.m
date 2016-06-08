@@ -42,7 +42,7 @@
         self.characterTextureAtlas = atlas;
         self.characterInitTexture = [atlas textureNamed: [[atlas textureNames] firstObject]];
         self.characterMoveTextures = [@[] mutableCopy];
-        for (int i = 0 ; i < 3 ; i ++ ) {
+        for (int i = 0 ; i < 5 ; i ++ ) {
             [self.characterMoveTextures addObject: [atlas textureNamed: [[NSString stringWithFormat: @"eater%d", i ] png]]];
         }
         
@@ -50,7 +50,7 @@
         
         self.anchorPoint = CGPointMake(0.5, 0.5);
         self.position = CGPointMake(750, 1900);
-        self.size = CGSizeMake(155, 107);
+       // self.size = CGSizeMake(155, 107);
         self.zPosition = 2;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.size.width / 2];
         self.physicsBody.allowsRotation = NO;

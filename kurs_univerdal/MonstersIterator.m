@@ -45,6 +45,8 @@
         }
         for (int j = 0; j < i; j++) {
             Monster *monsterNext = [monster copy];
+            monsterNext.characterSpeed += 3;
+            
             if ( enumerator ) {
                 enumerator(monsterNext);
             }

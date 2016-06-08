@@ -54,7 +54,7 @@
 
 - (void)stopMoving {
     self.physicsBody.resting = YES;
-    self.physicsBody.pinned = NO;
+    self.physicsBody.pinned = YES;
     [self removeActionForKey:@"moveAction"];
     self.isMoving = NO;
     if (self.characterMoving) {

@@ -34,7 +34,6 @@
         SKAction *moveForever = [SKAction repeatActionForever: moveAction];
         [character runAction: moveForever withKey:@"moveAction"];
     }
-
 }
 
 - (void)stopCharacter {

@@ -24,8 +24,8 @@
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
-    if ( !_contentCreated ){
-        
+    if ( !self.contentCreated ){
+        self.contentCreated = YES;
         self.physicsWorld.contactDelegate = self;
         
         if ( self.eater ) {
@@ -43,24 +43,24 @@
                     [self.blackHoles[i-1] setNextResponsibleHole: hole.hole];
                 }
                 hole.categoryBitMask = 1024 * (i + 1) ;
-
+                
                 monster.physicsBody.categoryBitMask =  3 + i;
                 i++;
                 [self.blackHoles addObject:hole];
                 [self addChild: hole.hole];
-
+                
                 hole.position =  CGPointMake([self getRandomNumberBetween:6000], [self getRandomNumberBetween:4000]);
                 [monster setPosition:CGPointMake([self getRandomNumberBetween:4000], [self getRandomNumberBetween:2000])];
                 
                 SKSpriteNode *heart = [SKSpriteNode spriteNodeWithImageNamed:@"heart_anatomy"];
                 heart.size = CGSizeMake(150, 150);
-                heart.zRotation = M_PI;
+                heart.zRotation = 2 * M_PI;
                 [self addChild: heart];
                 heart.position =  CGPointMake([self getRandomNumberBetween:6000], [self getRandomNumberBetween:4000]);
             }];
         }
         
-
+        
         SKSpriteNode *pause = [SKSpriteNode spriteNodeWithImageNamed: @"pause"];
         pause.position = CGPointMake(20, self.view.frame.size.height - 20);
         pause.name = @"pause";
@@ -68,37 +68,16 @@
         
         self.camera.xScale = 0.6;
         self.camera.yScale = 0.6;
-
+        
         [self updateCamera];
         self.eaterExecutor = [[CharacterCommandExecutor alloc]init];
         
         [self.eaterExecutor addCommand:[[CharacterCommand alloc]initWithCharacter:self.eater]];
+        
+        self.eater.characterMoving = [self characterMoving];
+        
     }
     
-    for (SKNode *node in self.children ) {
-        if ( [node isKindOfClass: [SKSpriteNode class]] ) {
-            NSLog(@"%u   %@", node.physicsBody.categoryBitMask, node.name);
-        }
-    }
-    
-    self.eaterHealhView = [[UIView alloc]initWithFrame:CGRectMake(50,
-                                                                  10,
-                                                                  self.view.frame.size.width - 70,
-                                                                  20)];
-    self.eaterHealhView.backgroundColor = [UIColor redColor];
-    self.eaterHealhView.layer.cornerRadius = self.eaterHealhView.frame.size.height / 2;
-    [self.view addSubview: self.eaterHealhView];
-    
-    UIButton *pauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [pauseButton addTarget:self
-                    action:@selector(pauseButtonPressed:)
-          forControlEvents:UIControlEventTouchUpInside];
-    [pauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
-    pauseButton.frame = CGRectMake(10, 10, 20, 20);
-    pauseButton.layer.cornerRadius = 10;
-    pauseButton.backgroundColor = [UIColor darkGrayColor];
-    [view addSubview:pauseButton];
-    self.eater.characterMoving = [self characterMoving];
 }
 
 - (id<CharacterMoving>)characterMoving {
@@ -112,6 +91,9 @@
     
     return 100 + arc4random() % (to-101);
 }
+- (void)dealloc {
+    
+}
 #pragma mark Touch Handling
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -123,7 +105,7 @@
     [self.eaterExecutor executeCommandForPoint: self.lastTouch];
 }
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-
+    
 }
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     self.lastTouch = [[touches anyObject] locationInNode: self];
@@ -159,7 +141,7 @@
     __block Monster *monstere;
     __block SKPhysicsBody *eaterBody;
     __block SKPhysicsBody *holeBody;
-
+    
     [self.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
         if ( monster.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
             monsterBody = contact.bodyA;
@@ -185,15 +167,15 @@
     
     if ( monsterBody && holeBody) {
         NSLog(@"hole && monster");
-
-            [self.blackHoles.firstObject performSuperGravityToSprite:monstere
-                                                         gravityBody:holeBody
-                                                                  do:^{
-                                                                      monstere.isDead = YES;
-                                                                      [monstere stopMoving];
-                                                                  } completion:^{
-                                                                      [monstere removeFromParent];
-                                                                  }];
+        
+        [self.blackHoles.firstObject performSuperGravityToSprite:monstere
+                                                     gravityBody:holeBody
+                                                              do:^{
+                                                                  monstere.isDead = YES;
+                                                                  [monstere stopMoving];
+                                                              } completion:^{
+                                                                  [monstere removeFromParent];
+                                                              }];
     } else if ( monsterBody && eaterBody ) {
         NSLog(@"monster && eater");
         [UIView animateWithDuration:0.2 animations:^{
@@ -202,7 +184,7 @@
         }];
     } else if ( eaterBody && holeBody ) {
         NSLog(@"hole && eater");
-
+        
         [self.blackHoles.firstObject performSuperGravityToSprite:self.eater
                                                      gravityBody:holeBody
                                                               do:^{
@@ -221,7 +203,7 @@
                                                                   [self.eater removeFromParent];
                                                               }];
     }
-
+    
 }
 
 
@@ -229,10 +211,10 @@
 - (void)gameOver:(BOOL)didWin {
     if ( didWin ) {
         NSLog(@"___WIN____");
-
+        
     } else {
         NSLog(@"___LOSE____");
-
+        
     }
 }
 

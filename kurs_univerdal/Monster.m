@@ -35,20 +35,19 @@
 
 - (Monster *)init {
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"eater"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"monster"];
     
     self = [super initWithTexture:[atlas textureNamed: [[atlas textureNames] firstObject]]];
     if (self) {
         self.characterTextureAtlas = atlas;
         self.characterInitTexture = [atlas textureNamed: [[atlas textureNames] firstObject]];
         self.characterMoveTextures = [@[] mutableCopy];
-        for (int i = 0 ; i < 3 ; i ++ ) {
-            [self.characterMoveTextures addObject: [atlas textureNamed: [[NSString stringWithFormat: @"eater%d", i ] png]]];
+        for (int i = 0 ; i < 4 ; i ++ ) {
+            [self.characterMoveTextures addObject: [atlas textureNamed: [[NSString stringWithFormat: @"monster%d", i ] png]]];
         }
         
-        self.characterSpeed = 150;
         self.anchorPoint = CGPointMake(0.5, 0.5);
-        self.size = CGSizeMake(155, 107);
+        //self.size = CGSizeMake(155, 107);
         self.zPosition = 2;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.size.width / 2];
         self.physicsBody.allowsRotation = NO;
@@ -57,9 +56,6 @@
         self.physicsBody.dynamic = YES;
         self.physicsBody.categoryBitMask = 2;
         self.physicsBody.contactTestBitMask = 1;
-        
-        self.color = [UIColor redColor];
-        self.colorBlendFactor = 1;
         self.name = @"monster";
         
     }
