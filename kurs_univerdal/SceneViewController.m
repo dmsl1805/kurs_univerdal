@@ -8,6 +8,8 @@
 
 #import "SceneViewController.h"
 #import "GameScene.h"
+#import "CharacterStateCareTaker.h"
+
 #import <SpriteKit/SpriteKit.h>
 
 @interface SceneViewController ()
@@ -15,11 +17,13 @@
 @property (nonatomic, strong) UIView *pauseView;
 @property (strong, nonatomic) IBOutlet UIView *pauseViewBackGround;
 @property (nonatomic, strong) GameScene *scene;
+@property (nonatomic, strong) NSMutableArray <CharacterStateCareTaker *> *charactersCaretakers;
+
 @end
 
 @implementation SceneViewController
 - (void)viewDidLoad {
-    
+    self.charactersCaretakers  = [@[]mutableCopy];
     self.pauseView.frame = CGRectMake(0,
                                       0,
                                       self.view.frame.size.width,
@@ -51,9 +55,43 @@
 }
 
 - (IBAction)pauseButtonPressed:(UIButton *)sender {
+    if ( self.pauseView.alpha ) {
+        [self restoreSceneStat];
+    } else {
+        [self saveSceneState];
+    }
+    [self.scene pauseGame: !self.pauseView.alpha];
     [UIView animateWithDuration:0.5 animations:^{
-        self.pauseView.alpha = !self.pauseView.alpha;
+        self.pauseView.alpha = !self.pauseView.alpha ;
     }];
+}
+
+- (void)saveSceneState {
+    [self.scene.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
+        if ( ! monster.isDead ) {
+            CharacterStateCareTaker *caretaker = [[CharacterStateCareTaker alloc]init];
+            [caretaker setPosition: monster.position];
+            [caretaker setVelocity: monster.physicsBody.velocity];
+            [caretaker setRotation: monster.zRotation];
+            [caretaker saveState];
+            [self.charactersCaretakers addObject: caretaker];
+        }
+    }];
+}
+- (void)restoreSceneState {
+    __block int i = 0;
+    [self.scene.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
+        if ( ! monster.isDead ) {
+            CharacterStateCareTaker *caretaker = self.charactersCaretakers[i++];
+            //[caretaker loadState];
+            monster.position = caretaker.position;
+            monster.zRotation = caretaker.rotation;
+            monster.physicsBody.velocity = caretaker.velocity;
+        }
+    }];
+}
+
+- (void)restoreSceneStat{
 }
 
 - (IBAction)playButtonPressed:(UIButton *)sender {

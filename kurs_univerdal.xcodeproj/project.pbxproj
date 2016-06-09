@@ -23,6 +23,10 @@
 		A3695BF41CFA28CC000597E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF21CFA28CC000597E7 /* Main.storyboard */; };
 		A3695BF61CFA28CC000597E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF51CFA28CC000597E7 /* Assets.xcassets */; };
 		A3695BF91CFA28CC000597E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3695BF71CFA28CC000597E7 /* LaunchScreen.storyboard */; };
+		A379C1001D0805C4000E4A85 /* CharacterState.m in Sources */ = {isa = PBXBuildFile; fileRef = A379C0FF1D0805C4000E4A85 /* CharacterState.m */; };
+		A379C1031D0806A2000E4A85 /* CharacterOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = A379C1021D0806A2000E4A85 /* CharacterOriginator.m */; };
+		A379C1061D0808BA000E4A85 /* CharacterMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = A379C1051D0808BA000E4A85 /* CharacterMemento.m */; };
+		A379C1091D080A75000E4A85 /* CharacterStateCareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A379C1081D080A75000E4A85 /* CharacterStateCareTaker.m */; };
 		A37F7C241D0017F50080F320 /* BlackHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C231D0017F50080F320 /* BlackHole.m */; };
 		A37F7C271D00624F0080F320 /* GameSceneTap.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C261D00624F0080F320 /* GameSceneTap.m */; };
 		A37F7C2C1D006CCC0080F320 /* LinearMove.m in Sources */ = {isa = PBXBuildFile; fileRef = A37F7C2B1D006CCC0080F320 /* LinearMove.m */; };
@@ -74,6 +78,14 @@
 		A3695BF51CFA28CC000597E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3695BF81CFA28CC000597E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3695BFA1CFA28CC000597E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A379C0FE1D0805C4000E4A85 /* CharacterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterState.h; sourceTree = "<group>"; };
+		A379C0FF1D0805C4000E4A85 /* CharacterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterState.m; sourceTree = "<group>"; };
+		A379C1011D0806A2000E4A85 /* CharacterOriginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterOriginator.h; sourceTree = "<group>"; };
+		A379C1021D0806A2000E4A85 /* CharacterOriginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterOriginator.m; sourceTree = "<group>"; };
+		A379C1041D0808BA000E4A85 /* CharacterMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterMemento.h; sourceTree = "<group>"; };
+		A379C1051D0808BA000E4A85 /* CharacterMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterMemento.m; sourceTree = "<group>"; };
+		A379C1071D080A75000E4A85 /* CharacterStateCareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterStateCareTaker.h; sourceTree = "<group>"; };
+		A379C1081D080A75000E4A85 /* CharacterStateCareTaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterStateCareTaker.m; sourceTree = "<group>"; };
 		A37F7C221D0017F50080F320 /* BlackHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHole.h; sourceTree = "<group>"; };
 		A37F7C231D0017F50080F320 /* BlackHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHole.m; sourceTree = "<group>"; };
 		A37F7C251D00624F0080F320 /* GameSceneTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneTap.h; sourceTree = "<group>"; };
@@ -322,7 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				A3695BF21CFA28CC000597E7 /* Main.storyboard */,
-				A3EA28D61D01A3A900147B27 /* scene view controller */,
+				A3EA28D61D01A3A900147B27 /* scene view controller + memento */,
 				A314F06D1CFAFED6008770BB /* GameViewController */,
 				A3D4F2A11D055C5600E8022E /* Settings View Controller */,
 				A3D4F2A51D055C8000E8022E /* Game Over View Controller */,
@@ -346,13 +358,21 @@
 			name = "Character builder + singletone";
 			sourceTree = "<group>";
 		};
-		A3EA28D61D01A3A900147B27 /* scene view controller */ = {
+		A3EA28D61D01A3A900147B27 /* scene view controller + memento */ = {
 			isa = PBXGroup;
 			children = (
 				A3EA28D71D01A3C600147B27 /* SceneViewController.h */,
 				A3EA28D81D01A3C600147B27 /* SceneViewController.m */,
+				A379C0FE1D0805C4000E4A85 /* CharacterState.h */,
+				A379C0FF1D0805C4000E4A85 /* CharacterState.m */,
+				A379C1011D0806A2000E4A85 /* CharacterOriginator.h */,
+				A379C1021D0806A2000E4A85 /* CharacterOriginator.m */,
+				A379C1041D0808BA000E4A85 /* CharacterMemento.h */,
+				A379C1051D0808BA000E4A85 /* CharacterMemento.m */,
+				A379C1071D080A75000E4A85 /* CharacterStateCareTaker.h */,
+				A379C1081D080A75000E4A85 /* CharacterStateCareTaker.m */,
 			);
-			name = "scene view controller";
+			name = "scene view controller + memento";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +503,7 @@
 			files = (
 				A37F7C2C1D006CCC0080F320 /* LinearMove.m in Sources */,
 				A314F0791CFB0568008770BB /* Monster.m in Sources */,
+				A379C1091D080A75000E4A85 /* CharacterStateCareTaker.m in Sources */,
 				A32461421CFF350900C9016A /* CharacterCommand.m in Sources */,
 				A3B6D1711D01CF74007874F6 /* SettingsViewController.m in Sources */,
 				A324614A1CFF412E00C9016A /* MonstersIterator.m in Sources */,
@@ -496,6 +517,7 @@
 				A3695BE91CFA28CC000597E7 /* AppDelegate.m in Sources */,
 				A3D4F2AD1D0570B700E8022E /* FlyweightTextureFactory.m in Sources */,
 				A3E0D0C51CFC6D39004579BC /* MonsterBuilder.m in Sources */,
+				A379C1031D0806A2000E4A85 /* CharacterOriginator.m in Sources */,
 				A34B76D61CFA31D000A3C36F /* GameScene.m in Sources */,
 				A314F0691CFAF98C008770BB /* GameTypesFactory.m in Sources */,
 				A3E0D0A91CFC4379004579BC /* CharacterBuilderDirector.m in Sources */,
@@ -504,9 +526,11 @@
 				A3695BE61CFA28CC000597E7 /* main.m in Sources */,
 				A3BFB84E1D0163EF0097B255 /* TapMove.m in Sources */,
 				A3E0D0AF1CFC47DA004579BC /* EaterBuilder.m in Sources */,
+				A379C1061D0808BA000E4A85 /* CharacterMemento.m in Sources */,
 				A3E0D0AC1CFC44D3004579BC /* CharacterBuilder.m in Sources */,
 				A314F0751CFB0491008770BB /* AbstractCharacter.m in Sources */,
 				A3D4F2B01D05733F00E8022E /* BlackHoleProxy.m in Sources */,
+				A379C1001D0805C4000E4A85 /* CharacterState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

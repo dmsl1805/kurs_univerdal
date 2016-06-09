@@ -46,7 +46,7 @@
     return self;
 }
 - (CharacterBuilder *)buildCharacterHealth:(CGFloat)health{
-    self.character.health = health;
+    self.character.health = @(health);
     return self;
 }
 - (AbstractCharacter *)getCharacter {

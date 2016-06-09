@@ -6,5 +6,6 @@ target 'kurs_univerdal' do
   # use_frameworks!
 
   # Pods for kurs_univerdal
+pod 'KVOController'
 
 end

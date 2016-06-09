@@ -24,6 +24,12 @@
     return nil;
 }
 
+- (void)setHealth:(NSNumber *)health {
+    if ( health.floatValue > 0 ){
+        _health = health;
+    }
+}
+
 - (instancetype)copyWithZone:(NSZone *)zone {
     AbstractCharacter *copy = [[self class] character];
     copy.characterInitTexture = self.characterInitTexture;

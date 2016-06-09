@@ -17,7 +17,7 @@
 @property ( nonatomic ) CGFloat agility;
 @property ( nonatomic ) CGFloat intelligence;
 @property ( nonatomic ) CGFloat shield;
-@property ( nonatomic ) CGFloat health;
+@property ( nonatomic ) NSNumber *health;
 @property ( nonatomic ) BOOL isDead;
 
 @property ( nonatomic, readonly ) BOOL isMoving;

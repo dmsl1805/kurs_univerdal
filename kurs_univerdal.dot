@@ -4,8 +4,14 @@ digraph G {
 	"EaterBuilder" -> "Eater";
 	"TapMove" -> "AbstractCharacter";
 	"TapMove" -> "CharacterMoving";
-	"SceneViewController" -> "GameTypesFactory";
+	"CharacterState" -> {};
+	"CharacterStateCareTaker" -> "CharacterOriginator";
+	"CharacterStateCareTaker" -> "CharacterState";
+	"CharacterStateCareTaker" -> "CharacterMemento";
 	"SceneViewController" -> "GameScene";
+	"SceneViewController" -> "GameTypesFactory";
+	"SceneViewController" -> "CharacterStateCareTaker";
+	"CharacterMemento" -> "CharacterState";
 	"CharacterMoving" -> {};
 	"Monster" -> "AbstractCharacter";
 	"BlackHoleProxy" -> "BlackHole";
@@ -33,6 +39,7 @@ digraph G {
 	"SettingsViewController" -> "GameViewController";
 	"GameOverViewController" -> {};
 	"CharacterBuilder" -> "AbstractCharacter";
+	"CharacterOriginator" -> "CharacterState";
 	"CharacterBuilderDirector" -> "MonsterBuilder";
 	"CharacterBuilderDirector" -> "EaterBuilder";
 	"CharacterBuilderDirector" -> "Monster";

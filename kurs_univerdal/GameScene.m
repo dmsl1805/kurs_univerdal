@@ -11,13 +11,15 @@
 #import "CharacterCommandExecutor.h"
 #import "BlackHoleProxy.h"
 #import "LinearMove.h"
+#import <KVOController/KVOController.h>
+#import <KVOController/NSObject+FBKVOController.h>
 
 @interface GameScene() <SKPhysicsContactDelegate>
 @property ( nonatomic ) CGPoint lastTouch;
 @property ( nonatomic ) BOOL contentCreated;
+@property ( nonatomic ) BOOL isPaused;
 @property ( nonatomic, strong ) NSMutableArray <BlackHoleProxy *> *blackHoles;
 @property ( nonatomic, strong ) CharacterCommandExecutor *eaterExecutor;
-@property ( nonatomic, strong ) UIView *eaterHealhView;
 @property ( nonatomic, strong ) id <CharacterMoving> characterMoving;
 @end
 
@@ -76,6 +78,15 @@
         
         self.eater.characterMoving = [self characterMoving];
         
+        [self.KVOController observe:self.eater
+                            keyPath:@"health"
+                            options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
+                              block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+                                  NSLog(@" ___ observer  __ %@", observer);
+                                  NSLog(@" ___ object    __ %@", object);
+                                  NSLog(@" ___ change    __ %@", change);
+                            }];
+
     }
     
 }
@@ -91,35 +102,46 @@
     
     return 100 + arc4random() % (to-101);
 }
-- (void)dealloc {
-    
+
+- (void)pauseGame:(BOOL)paused {
+    if ( paused ) {
+        self.paused = YES;
+        [self.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
+            [monster stopMoving];
+        }];
+    } else {
+        self.paused = NO;
+    }
 }
+
 #pragma mark Touch Handling
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.lastTouch = [[touches anyObject] locationInNode: self];
-    [self.eaterExecutor executeCommandForPoint: self.lastTouch];
+    if ( ! self.isPaused ) {
+        self.lastTouch = [[touches anyObject] locationInNode: self];
+        [self.eaterExecutor executeCommandForPoint: self.lastTouch];
+    }
 }
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.lastTouch = [[touches anyObject] locationInNode: self];
-    [self.eaterExecutor executeCommandForPoint: self.lastTouch];
-}
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+    if ( ! self.isPaused ) {
+        self.lastTouch = [[touches anyObject] locationInNode: self];
+        [self.eaterExecutor executeCommandForPoint: self.lastTouch];
+    }
 }
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.lastTouch = [[touches anyObject] locationInNode: self];
-    [self.eater stopMoving];
+    if ( ! self.isPaused ) {
+        self.lastTouch = [[touches anyObject] locationInNode: self];
+        [self.eater stopMoving];
+    }
 }
 
-- (void)pauseButtonPressed:(UIButton*)sender {
-    
-}
 #pragma mark Updates
 
 - (void)didSimulatePhysics {
-    [self updateCamera];
-    [self updateMonsters];
+    if ( ! self.isPaused ) {
+        [self updateCamera];
+        [self updateMonsters];
+    }
 }
 
 - (void)updateCamera {
@@ -131,82 +153,77 @@
     }];
 }
 -(void)update:(CFTimeInterval)currentTime {
+    NSLog(@"%f",currentTime);
     /* Called before each frame is rendered */
 }
 
 #pragma mark SKPhysicsContactDelegate
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
-    __block SKPhysicsBody *monsterBody;
-    __block Monster *monstere;
-    __block SKPhysicsBody *eaterBody;
-    __block SKPhysicsBody *holeBody;
-    
-    [self.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
-        if ( monster.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
-            monsterBody = contact.bodyA;
-            monstere = monster;
-        } else if ( monster.physicsBody.categoryBitMask == contact.bodyB.categoryBitMask ){
-            monstere = monster;
-            monsterBody = contact.bodyB;
-        }
-    }];
-    
-    for (BlackHoleProxy *hole in self.blackHoles) {
-        if ( hole.hole.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
-            holeBody = contact.bodyA;
-        } else if ( hole.hole.physicsBody.categoryBitMask == contact.bodyB.categoryBitMask ){
-            holeBody = contact.bodyB;
-        }
-    }
-    if ( self.eater.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ){
-        eaterBody = contact.bodyA;
-    } else if ( self.eater.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
-        eaterBody = contact.bodyB;
-    }
-    
-    if ( monsterBody && holeBody) {
-        NSLog(@"hole && monster");
+    if ( ! self.isPaused ){
+        __block SKPhysicsBody *monsterBody;
+        __block Monster *monstere;
+        __block SKPhysicsBody *eaterBody;
+        __block SKPhysicsBody *holeBody;
         
-        [self.blackHoles.firstObject performSuperGravityToSprite:monstere
-                                                     gravityBody:holeBody
-                                                              do:^{
-                                                                  monstere.isDead = YES;
-                                                                  [monstere stopMoving];
-                                                              } completion:^{
-                                                                  [monstere removeFromParent];
-                                                              }];
-    } else if ( monsterBody && eaterBody ) {
-        NSLog(@"monster && eater");
-        [UIView animateWithDuration:0.2 animations:^{
-            CGRect r = self.eaterHealhView.frame;
-            self.eaterHealhView.frame = CGRectMake(r.origin.x, r.origin.y, r.size.width - 10, r.size.height);
+        [self.monsterIterator enumerateMonstersUsingBlock:^(Monster *monster) {
+            if ( monster.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
+                monsterBody = contact.bodyA;
+                monstere = monster;
+            } else if ( monster.physicsBody.categoryBitMask == contact.bodyB.categoryBitMask ){
+                monstere = monster;
+                monsterBody = contact.bodyB;
+            }
         }];
-    } else if ( eaterBody && holeBody ) {
-        NSLog(@"hole && eater");
         
-        [self.blackHoles.firstObject performSuperGravityToSprite:self.eater
-                                                     gravityBody:holeBody
-                                                              do:^{
-                                                                  self.eater.isDead = YES;
-                                                                  [self.eater stopMoving];
-                                                                  [self.eater removeAllActions];
-                                                                  self.eater.health = 0;
-                                                                  [UIView animateWithDuration:1 animations:^{
-                                                                      CGRect r = self.eaterHealhView.frame;
-                                                                      self.eaterHealhView.frame = CGRectMake(r.origin.x,
-                                                                                                             r.origin.y,
-                                                                                                             0,
-                                                                                                             r.size.height);
+        for (BlackHoleProxy *hole in self.blackHoles) {
+            if ( hole.hole.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
+                holeBody = contact.bodyA;
+            } else if ( hole.hole.physicsBody.categoryBitMask == contact.bodyB.categoryBitMask ){
+                holeBody = contact.bodyB;
+            }
+        }
+        if ( self.eater.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ){
+            eaterBody = contact.bodyA;
+        } else if ( self.eater.physicsBody.categoryBitMask == contact.bodyA.categoryBitMask ) {
+            eaterBody = contact.bodyB;
+        }
+        
+        if ( monsterBody && holeBody) {
+            NSLog(@"hole && monster");
+            
+            [self.blackHoles.firstObject performSuperGravityToSprite:monstere
+                                                         gravityBody:holeBody
+                                                                  do:^{
+                                                                      monstere.isDead = YES;
+                                                                      [monstere stopMoving];
+                                                                  } completion:^{
+                                                                      [monstere removeFromParent];
                                                                   }];
-                                                              } completion:^{
-                                                                  [self.eater removeFromParent];
-                                                              }];
+        } else if ( monsterBody && eaterBody ) {
+            NSLog(@"monster && eater");
+            CGFloat health = self.eater.health.floatValue;
+            health -= 100;
+            self.eater.health = @(health);
+        } else if ( eaterBody && holeBody ) {
+            NSLog(@"hole && eater");
+            
+            [self.blackHoles.firstObject performSuperGravityToSprite:self.eater
+                                                         gravityBody:holeBody
+                                                                  do:^{
+                                                                      self.eater.isDead = YES;
+                                                                      [self.eater stopMoving];
+                                                                      [self.eater removeAllActions];
+                                                                      self.eater.health = 0;
+                                                                  }
+                                                          completion:^{
+                                                                      [self.eater removeFromParent];
+                                                                  }];
+        }
+        
     }
     
 }
-
-
 
 - (void)gameOver:(BOOL)didWin {
     if ( didWin ) {

@@ -17,4 +17,7 @@
 
 @property ( nonatomic, strong ) AbstractCharacter *eater;
 @property ( nonatomic, strong ) MonstersIterator *monsterIterator;
+
+- (void)pauseGame:(BOOL)paused;
+
 @end

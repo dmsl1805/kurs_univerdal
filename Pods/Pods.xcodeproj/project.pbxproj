@@ -7,35 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2118E60A44EBB71ECADE48A03FE1E622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		AC2A357F0C1FB8BDCE2C70485D84B6A3 /* Pods-kurs_univerdal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F50C7C4350E0EE5E79456DC538642E /* Pods-kurs_univerdal-dummy.m */; };
+		1C728B6246F4EDD4C12C8679D10D7015 /* KVOController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F9C019BEB7908A01B636A86A7FD7C /* KVOController-dummy.m */; };
+		7538A0F2F63DBECECF94D9E8C5CD8293 /* NSObject+FBKVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F6B47E3701E2B32FE6BEDE3E8816A7 /* NSObject+FBKVOController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B3825D329FE232F20DB46D14CB7C0C6 /* FBKVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = C75F049E5EAFFC506E13BAA9FEFFD2FD /* FBKVOController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C5B0594F80940EBC4E4B384F1029E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B501996B96C7C48E829CAEB409C97489 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5DB08CDCAAAD7FE2A27CACD2A5F15 /* FBKVOController.m */; };
+		C3DFE742BDCB6E445D657A0648A24D19 /* Pods-kurs_univerdal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F50C7C4350E0EE5E79456DC538642E /* Pods-kurs_univerdal-dummy.m */; };
+		E556F18EEE1E771F8204F634E4EE8979 /* KVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AD5ABD20343A8DBDC80B5376C314105 /* KVOController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE9165A45B9E808F70DA96B5296E7944 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F76EA4225E5705F1CEE58838A017449D /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A28299B94049E3BA193E514ECB8E55 /* NSObject+FBKVOController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		37DA6CED9C15F49971206FEA78D336AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E86FC8F874CD855F1291330BDE16D1;
+			remoteInfo = KVOController;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0BC5DB08CDCAAAD7FE2A27CACD2A5F15 /* FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBKVOController.m; path = FBKVOController/FBKVOController.m; sourceTree = "<group>"; };
 		24F50C7C4350E0EE5E79456DC538642E /* Pods-kurs_univerdal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kurs_univerdal-dummy.m"; sourceTree = "<group>"; };
 		38291977C42FF6D69081C790FF9099BC /* Pods-kurs_univerdal-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kurs_univerdal-frameworks.sh"; sourceTree = "<group>"; };
+		471F9C019BEB7908A01B636A86A7FD7C /* KVOController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVOController-dummy.m"; sourceTree = "<group>"; };
+		50E4A126145FDB0BE91ABB568CB35890 /* libKVOController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKVOController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5311C7D7B344ABEF9B432A550320782D /* Pods-kurs_univerdal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kurs_univerdal.release.xcconfig"; sourceTree = "<group>"; };
+		5AD5ABD20343A8DBDC80B5376C314105 /* KVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOController.h; path = FBKVOController/KVOController.h; sourceTree = "<group>"; };
+		65A28299B94049E3BA193E514ECB8E55 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FBKVOController.m"; path = "FBKVOController/NSObject+FBKVOController.m"; sourceTree = "<group>"; };
 		692EA803F116E1459E0D04D2D3C3873D /* Pods-kurs_univerdal-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kurs_univerdal-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7C3068BE7626E36ECFF87BCA56F9BCCB /* Pods-kurs_univerdal-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kurs_univerdal-acknowledgements.plist"; sourceTree = "<group>"; };
+		84BDEE88CFC2687C88DA2FDB9C1717E8 /* libPods-kurs_univerdal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kurs_univerdal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AF148FD60CAE7602973F747B13C523AB /* libPods-kurs_univerdal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kurs_univerdal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D44833BD1E8887EEBB4CCCFBB71D8E /* KVOController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVOController.xcconfig; sourceTree = "<group>"; };
+		C6F6B47E3701E2B32FE6BEDE3E8816A7 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+FBKVOController.h"; path = "FBKVOController/NSObject+FBKVOController.h"; sourceTree = "<group>"; };
+		C75F049E5EAFFC506E13BAA9FEFFD2FD /* FBKVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBKVOController.h; path = FBKVOController/FBKVOController.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CFC749D466F1A5F64EC8137D20488E0F /* KVOController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVOController-prefix.pch"; sourceTree = "<group>"; };
 		E76207D9DA651B6A4C0DE468B0BD4D8F /* Pods-kurs_univerdal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kurs_univerdal.debug.xcconfig"; sourceTree = "<group>"; };
 		FF5FA44391B4753E1831E04B664B8688 /* Pods-kurs_univerdal-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kurs_univerdal-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB9D051CC02C1DB25AC10E4A647E136C /* Frameworks */ = {
+		44EA0B463E4898D1C4D3361DD8395B3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2118E60A44EBB71ECADE48A03FE1E622 /* Foundation.framework in Frameworks */,
+				8C5B0594F80940EBC4E4B384F1029E5F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B409F5F6EF7262A6B0E96981291544CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9165A45B9E808F70DA96B5296E7944 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13797F40FCDC56A4562BD4C8CB09AD89 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6D44833BD1E8887EEBB4CCCFBB71D8E /* KVOController.xcconfig */,
+				471F9C019BEB7908A01B636A86A7FD7C /* KVOController-dummy.m */,
+				CFC749D466F1A5F64EC8137D20488E0F /* KVOController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KVOController";
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -44,10 +89,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		59F4B328D315978150E33881E6F5F016 /* Products */ = {
+		58D274B73FD5ABE58EDFE2492410C4DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF148FD60CAE7602973F747B13C523AB /* libPods-kurs_univerdal.a */,
+				50E4A126145FDB0BE91ABB568CB35890 /* libKVOController.a */,
+				84BDEE88CFC2687C88DA2FDB9C1717E8 /* libPods-kurs_univerdal.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +103,23 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				59F4B328D315978150E33881E6F5F016 /* Products */,
+				D8AB05DD32FB26FEB036F4D320D7BB2B /* Pods */,
+				58D274B73FD5ABE58EDFE2492410C4DE /* Products */,
 				FEEBF3026A042DBD21CBD7A4D302164B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A728032445A87D7849A9E5DFB8807CD0 /* KVOController */ = {
+			isa = PBXGroup;
+			children = (
+				C75F049E5EAFFC506E13BAA9FEFFD2FD /* FBKVOController.h */,
+				0BC5DB08CDCAAAD7FE2A27CACD2A5F15 /* FBKVOController.m */,
+				5AD5ABD20343A8DBDC80B5376C314105 /* KVOController.h */,
+				C6F6B47E3701E2B32FE6BEDE3E8816A7 /* NSObject+FBKVOController.h */,
+				65A28299B94049E3BA193E514ECB8E55 /* NSObject+FBKVOController.m */,
+				13797F40FCDC56A4562BD4C8CB09AD89 /* Support Files */,
+			);
+			path = KVOController;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -85,6 +145,14 @@
 			path = "Target Support Files/Pods-kurs_univerdal";
 			sourceTree = "<group>";
 		};
+		D8AB05DD32FB26FEB036F4D320D7BB2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A728032445A87D7849A9E5DFB8807CD0 /* KVOController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FEEBF3026A042DBD21CBD7A4D302164B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,21 +163,52 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E60794806D2DBDF868C3D88CD1561CB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3825D329FE232F20DB46D14CB7C0C6 /* FBKVOController.h in Headers */,
+				E556F18EEE1E771F8204F634E4EE8979 /* KVOController.h in Headers */,
+				7538A0F2F63DBECECF94D9E8C5CD8293 /* NSObject+FBKVOController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		5EDCB2DECEDD0BE29083A0F81FA21DD2 /* Pods-kurs_univerdal */ = {
+		391DD53D471274D7F19B4719E8E1D538 /* Pods-kurs_univerdal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63A619CB174F587E2595E3C5C97BDDB4 /* Build configuration list for PBXNativeTarget "Pods-kurs_univerdal" */;
+			buildConfigurationList = F9DDF2B71A032CF936609233EBC792AB /* Build configuration list for PBXNativeTarget "Pods-kurs_univerdal" */;
 			buildPhases = (
-				D01574BCF97D6774B9EAB0C1F32946CB /* Sources */,
-				DB9D051CC02C1DB25AC10E4A647E136C /* Frameworks */,
+				E2C14F1E02D47FE4A15307599879ECB5 /* Sources */,
+				B409F5F6EF7262A6B0E96981291544CE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E76E413A8718AF05D0DDA7850AE82E32 /* PBXTargetDependency */,
+			);
+			name = "Pods-kurs_univerdal";
+			productName = "Pods-kurs_univerdal";
+			productReference = 84BDEE88CFC2687C88DA2FDB9C1717E8 /* libPods-kurs_univerdal.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		65E86FC8F874CD855F1291330BDE16D1 /* KVOController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C45695980A7BEDAA75AF802285D8ADC1 /* Build configuration list for PBXNativeTarget "KVOController" */;
+			buildPhases = (
+				558E548592DAFFCC0C843D9469FDDD8E /* Sources */,
+				44EA0B463E4898D1C4D3361DD8395B3A /* Frameworks */,
+				E60794806D2DBDF868C3D88CD1561CB8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-kurs_univerdal";
-			productName = "Pods-kurs_univerdal";
-			productReference = AF148FD60CAE7602973F747B13C523AB /* libPods-kurs_univerdal.a */;
+			name = KVOController;
+			productName = KVOController;
+			productReference = 50E4A126145FDB0BE91ABB568CB35890 /* libKVOController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,27 +228,68 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 59F4B328D315978150E33881E6F5F016 /* Products */;
+			productRefGroup = 58D274B73FD5ABE58EDFE2492410C4DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EDCB2DECEDD0BE29083A0F81FA21DD2 /* Pods-kurs_univerdal */,
+				65E86FC8F874CD855F1291330BDE16D1 /* KVOController */,
+				391DD53D471274D7F19B4719E8E1D538 /* Pods-kurs_univerdal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D01574BCF97D6774B9EAB0C1F32946CB /* Sources */ = {
+		558E548592DAFFCC0C843D9469FDDD8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2A357F0C1FB8BDCE2C70485D84B6A3 /* Pods-kurs_univerdal-dummy.m in Sources */,
+				B501996B96C7C48E829CAEB409C97489 /* FBKVOController.m in Sources */,
+				1C728B6246F4EDD4C12C8679D10D7015 /* KVOController-dummy.m in Sources */,
+				F76EA4225E5705F1CEE58838A017449D /* NSObject+FBKVOController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2C14F1E02D47FE4A15307599879ECB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3DFE742BDCB6E445D657A0648A24D19 /* Pods-kurs_univerdal-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E76E413A8718AF05D0DDA7850AE82E32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KVOController;
+			target = 65E86FC8F874CD855F1291330BDE16D1 /* KVOController */;
+			targetProxy = 37DA6CED9C15F49971206FEA78D336AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0FFFE2ED14692CE7CD87F502DE4378D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5311C7D7B344ABEF9B432A550320782D /* Pods-kurs_univerdal.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		46EE69AF77A148AF92860F097B5698B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -192,6 +332,27 @@
 			};
 			name = Debug;
 		};
+		78483E3A5E72C5CEB1CB6489053E2A5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D44833BD1E8887EEBB4CCCFBB71D8E /* KVOController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KVOController/KVOController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		7A156876A8824526ED495550DF098FA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -230,28 +391,28 @@
 			};
 			name = Release;
 		};
-		89D7007B86D5B8A19D6EAE20BE66B9FB /* Release */ = {
+		8D159780770D069A0A29C29ABCFEC50A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5311C7D7B344ABEF9B432A550320782D /* Pods-kurs_univerdal.release.xcconfig */;
+			baseConfigurationReference = B6D44833BD1E8887EEBB4CCCFBB71D8E /* KVOController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/KVOController/KVOController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		8F35B91619B8127E3DA167D32F745EE3 /* Debug */ = {
+		BBA0EBB3258E5F4DFF64238E3100A30A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E76207D9DA651B6A4C0DE468B0BD4D8F /* Pods-kurs_univerdal.debug.xcconfig */;
 			buildSettings = {
@@ -284,11 +445,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63A619CB174F587E2595E3C5C97BDDB4 /* Build configuration list for PBXNativeTarget "Pods-kurs_univerdal" */ = {
+		C45695980A7BEDAA75AF802285D8ADC1 /* Build configuration list for PBXNativeTarget "KVOController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F35B91619B8127E3DA167D32F745EE3 /* Debug */,
-				89D7007B86D5B8A19D6EAE20BE66B9FB /* Release */,
+				78483E3A5E72C5CEB1CB6489053E2A5D /* Debug */,
+				8D159780770D069A0A29C29ABCFEC50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DDF2B71A032CF936609233EBC792AB /* Build configuration list for PBXNativeTarget "Pods-kurs_univerdal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA0EBB3258E5F4DFF64238E3100A30A /* Debug */,
+				0FFFE2ED14692CE7CD87F502DE4378D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
